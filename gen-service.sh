@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo '#!/bin/bash' > /usr/local/bin/ec2-webserver
-echo  $(which python3)' '$(pwd)"/ec2-webserver/webapp/server.py" >> /usr/local/bin/ec2-healthz
+echo  $(which python3)' '$(pwd)"/ec2-webserver/webapp/server.py" >> /usr/local/bin/ec2-webserver
 chmod +x /usr/local/bin/ec2-webserver
 
 cat <<EOF | sudo tee /etc/systemd/system/ec2-webserver.service
